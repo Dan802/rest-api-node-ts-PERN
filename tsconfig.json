@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "lib": ["ESNext"],
+    "target": "esnext",
+    "moduleResolution": "nodenext",
+    "module": "nodenext",
+    "strict": false,
+    "sourceMap": true, // For debbuging
+    "esModuleInterop": true,
+    "declaration": true, 
+    "experimentalDecorators": true, // allow @ when creating db models
+    "emitDecoratorMetadata": true
+  }, 
+  "include": ["src/**/*.ts"]
+}
