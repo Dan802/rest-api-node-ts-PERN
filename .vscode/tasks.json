@@ -7,29 +7,8 @@
             "runOptions": {
                 "runOn": "folderOpen"
             },
-            "label": "Develop",
+            "label": "Backend",
             "detail": "nodemon ts-node",
-            "presentation": {
-                "reveal": "silent",
-                "panel": "new"
-            },
         },
-        {
-            "type": "shell",
-            "runOptions": {
-                "runOn": "folderOpen"
-            },
-            "label": "Typescript compiler",
-            "command": "npx tsc",
-            "detail": "Runs Typescript compiler",
-            "presentation": {
-                "reveal": "silent",
-                "panel": "new"
-            },
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-        }
     ]
 }

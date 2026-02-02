@@ -11,7 +11,8 @@
     "esModuleInterop": true,
     "declaration": true, 
     "experimentalDecorators": true, // allow @ when creating db models
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "isolatedModules": true
   }, 
   "include": ["src/**/*.ts"]
 }

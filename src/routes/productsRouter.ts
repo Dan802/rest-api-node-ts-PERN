@@ -39,7 +39,7 @@ router.put('/:id',
     .isNumeric()
     .withMessage("Price not valid")
     .notEmpty()
-    .withMessage("The price can be empty")
+    .withMessage("The price cant be empty")
     .custom((value) => value > 0)
     .withMessage("Price not valid"),
   body("availability")
