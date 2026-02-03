@@ -4,6 +4,8 @@ import cors, {CorsOptions} from "cors";
 import morgan from 'morgan';
 import productsRouter from "./routes/productsRouter";
 import db from "./config/db";
+import swaggerUi from 'swagger-ui-express';
+import swaggeSpec, {swaggerUiOptions} from "./config/swagger";
 
 // Database conection
 export async function connectDB() {
@@ -27,7 +29,8 @@ const corsOptions : CorsOptions = {
     
     // If you do not want to block REST tools or server-to-server requests, 
     // add a !origin check 
-    if( origin === process.env.FRONTEND_URL || !origin){
+
+    if( origin === process.env.FRONTEND_URL || origin === process.env.BACKEND_URL || !origin){
       callback(null, true) // Allow the connection
     } else {
       callback(new Error("CORS error"))
@@ -50,5 +53,8 @@ server.use('/api/products', productsRouter);
 server.get("/api", (req, res) => {
   res.json({msg: "Desde Api"})
 })
+
+// DOCUMENTATION
+server.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggeSpec, swaggerUiOptions))
 
 export default server;
