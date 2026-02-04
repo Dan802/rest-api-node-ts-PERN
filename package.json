@@ -8,7 +8,7 @@
     "pretest": "ts-node ./src/data --clear",
     "test": "jest --detectOpenHandles",
     "test:coverage": "npm run pretest && jest --detectOpenHandles --coverage",
-    "compile": "tsc"
+    "build": "tsc"
   },
   "keywords": [
     "Postgress",

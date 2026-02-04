@@ -30,7 +30,7 @@ const corsOptions : CorsOptions = {
     // If you do not want to block REST tools or server-to-server requests, 
     // add a !origin check 
 
-    if( origin === process.env.FRONTEND_URL || origin === process.env.BACKEND_URL || !origin){
+    if( origin === process.env.FRONTEND_URL || origin === process.env.BACKEND_URL){
       callback(null, true) // Allow the connection
     } else {
       callback(new Error("CORS error"))

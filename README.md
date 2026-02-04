@@ -6,16 +6,15 @@ Node | Expresss | TypeScript | Sequelize
 Docs: Jest | Swagger
 
 ## Commands
-server:
   npm run dev
-
-  npm pretest -> runs automatically before the test
-
-  aslo exists npm postest 
 
   npm test
 
-  npx tsc -> to compile ts files to js 
+  npm pretest -> runs automatically before the test
+
+  also exists npm postest 
+
+  npx tsc || npm run build -> to compile ts files to js 
 
   npm i colors -> terminal with colors :D 
 
