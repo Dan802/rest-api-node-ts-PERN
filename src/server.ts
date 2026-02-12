@@ -25,18 +25,8 @@ const server = express();
 
 // Enable cors 
 const corsOptions : CorsOptions = {
-  origin: function (origin, callback) {
-    
-    // If you do not want to block REST tools or server-to-server requests, 
-    // add a !origin check 
-
-    if( origin === process.env.FRONTEND_URL || origin === process.env.BACKEND_URL){
-      callback(null, true) // Allow the connection
-    } else {
-      callback(new Error("CORS error"))
-      console.log(colors.red.bold("CORS error, Don't allow connection --server.ts--"))
-    }
-  }
+  origin: [process.env.FRONTEND_URL],
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
 server.use(cors(corsOptions))
