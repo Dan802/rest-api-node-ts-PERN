@@ -1,5 +1,6 @@
 import { Sequelize } from "sequelize-typescript";
 import dotenv from "dotenv";
+import pg from 'pg';
 
 dotenv.config({ quiet: true });
 
@@ -11,6 +12,8 @@ const db = new Sequelize(process.env.DATABASE_URL!, {
   //   }
   // },
   // __dirname: /src/config/db.ts
+  dialect: 'postgres',
+  dialectModule: pg,
   models: [__dirname + "/../models/**/*"],
   logging: false, // console logs
 });
